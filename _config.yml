@@ -1,15 +1,50 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
+# File: themes/bootstrap-blog/_config.yml
+
+# Header
+navbar_brand: false
+menu:
+    Home:  /
+    archives: archives/index.html
+    'PORTFOLIO': page/index.html
+    'GITHUB' : https://github.com/kimakuh
+    'RESUME' : wntd.co/tWLYc6
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+widgets:
+- about         # See also: `about_content`
+- category
+- tag
+- tagcloud
+- archives
+- recent_posts
+about_widget_content: >
+  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod.
+  Cras mattis consectetur purus sit amet fermentum. Aenean
+  lacinia bibendum nulla sed consectetur.</p>
+
+# Miscellaneous
+google_analytics:
+favicon:
+twitter:
+google_plus:
+
 
 # Site
-title: Hexo
-subtitle:
+title: Hello, I am Front-End Developer
+subtitle: 안녕하세요.
 description:
 keywords:
-author: John Doe
-language:
-timezone:
+author: Kim GaRam
+language: en
+timezone: Asia/Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -43,7 +78,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -52,7 +87,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -73,10 +108,42 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hiero
+
+
+theme_config:
+  # Header
+  navbar_brand: <img src="/navbrand.png">
+  menu:
+    Home: /
+    'archives' : archives/index.html
+    'PORTFOLIO' : page/index.html
+    'GITHUB' : https://github.com/kimakuh
+    'PROJECT' : page/project/sub_layout_max.html
+
+
+  widgets:
+    - about
+    - category
+    - recent_posts
+    - tag
+
+  about_widget_content: >
+    <p>This is <strong>custom content</strong> for the
+    "about" sidebar widget.</p>
+
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/kimakuh/kimakuh.github.io
+  repo: https://github.com/kimakuh/kimakuh.github.io.git
+
+
+
+archive_generator:
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
